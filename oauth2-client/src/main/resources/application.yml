@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  security:
+    oauth2:
+      client:
+        # Enregistrement des clients OAuth2
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID:placeholder_id}
+            client-secret: ${GOOGLE_CLIENT_SECRET:placeholder_secret}
+            scope:
+              - openid
+              - profile
+              - email
+        # Configuration des fournisseurs (fournisseurs d'identité)
+        provider:
+          google:
+            # URI de l'émetteur des tokens (permet à Spring de valider la signature JWT)
+            issuer-uri: https://accounts.google.com

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Utilisateur</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+
+<div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center;">
+    <h2 style="color: #333;">Informations Utilisateur (OIDC)</h2>
+
+    <img th:src="${picture}" alt="Photo de profil" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #ddd;"/>
+
+    <div style="margin-top: 20px; text-align: left;">
+        <p><strong>Nom complet :</strong> <span th:text="${name}">Utilisateur</span></p>
+        <p><strong>Adresse Email :</strong> <span th:text="${email}">email@example.com</span></p>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <a href="/logout" style="color: #d9534f; text-decoration: none; font-weight: bold;">Se déconnecter</a>
+    </div>
+</div>
+
+</body>
+</html>
